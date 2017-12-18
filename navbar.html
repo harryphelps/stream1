@@ -2,7 +2,8 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
-		<title>Flexbox</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<title>Semantic web</title>
 		<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Dosis' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" type="text/css" href="reset.css">
@@ -13,8 +14,7 @@
 		nav{
 			font-family: roboto;
 			margin: 30px auto;
-			width: 90%;
-			height: 500px;
+			width: 100%;
 			display: flex; /*sets up flex conatiner*/
 			flex-direction: column;/*stacks on top of each other for mobile display*/
 			align-items:stretch;
@@ -31,17 +31,33 @@
 			font-family: Dosis;
 			padding:20px;
 			text-align: center;
-			font-size: 2em;
+			font-size: 40px;
 			border-bottom:1px solid black;
 		}
 		#logoNav{
-			font-size: 2em;
+			font-size: 40px;
 			font-weight: bold;
 			}
+
+		#landing {
+			display: flex;
+			flex-direction: column;
+			font-size: 2em;
+			justify-content: center;
+			align-items: center;
+		}
+		#landing-message{
+			text-align: center;
+			font-size: 50px;
+			font-family: Dosis;
+			margin: 50px 20px;
+		}
+
 		@media screen and (min-width: 700px){ /*set for screens more than 700px*/
 			nav{
 				flex-flow: row;/* sets direction of nav*/
 				align-items:baseline;
+				width: 90%;
 				
 			}
 			a{
@@ -51,6 +67,11 @@
 			#logoNav{
 				flex:6;/*set size of logo */
 				text-align: left;
+			}
+			#landing{
+				flex-direction: row;
+				width: 80%;
+				margin: 100px auto;
 			}
 		}
 		</style>
@@ -64,5 +85,13 @@
 		<a href="#">Contact</a>
 		<a href="#">Photos</a>
 	</nav>
+	<section id="landing">
+		<div class="landing-stuff" id="landing-message">
+			<h2>Make Creative Clever Fun App. Simple</h2>
+		</div>
+		<div class="landing-stuff" id="landing-graphic">
+			<img src="laptop.png" alt="laptop">
+		</div>	
+	</section>
 </body>
 </html>
