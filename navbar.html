@@ -42,7 +42,6 @@
 		#landing {
 			display: flex;
 			flex-direction: column;
-			font-size: 2em;
 			justify-content: center;
 			align-items: center;
 		}
@@ -51,6 +50,32 @@
 			font-size: 50px;
 			font-family: Dosis;
 			margin: 50px 20px;
+		}
+		.cards{
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+
+		}
+		.card{
+			flex:1;
+			margin-top: 50px;
+			margin: 50px 20px;
+			background-color: white;
+			padding: 20px;
+		}
+		.card h2{
+			font-family:dosis;
+			font-size:30px;
+			margin-top: 10px;
+			margin-bottom: 20px;
+		}
+		.card img{
+			width: 100%;
+		}
+		.card p{
+			font-family:dosis;
+			font-size: 22px;
 		}
 
 		@media screen and (min-width: 700px){ /*set for screens more than 700px*/
@@ -61,7 +86,7 @@
 				
 			}
 			a{
-				font-size: 1.3em;
+				font-size: 25px;
 				border:none; /*remove border*/
 			}
 			#logoNav{
@@ -72,6 +97,11 @@
 				flex-direction: row;
 				width: 80%;
 				margin: 100px auto;
+			}
+			.cards{
+				display: inline-flex;
+				flex-wrap: nowrap;
+				width: 30%;
 			}
 		}
 		</style>
@@ -91,6 +121,27 @@
 		</div>
 		<div class="landing-stuff" id="landing-graphic">
 			<img src="laptop.png" alt="laptop">
+		</div>	
+	</section>
+	<section class="cards">
+		<div class="card">
+			<img src="graphic1.png" alt="design pic">
+			<h2>Web Info Sessions</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
+		</div>	
+	</section>
+		<section class="cards">
+		<div class="card">
+			<img src="graphic2.png" alt="design pic">
+			<h2>Web Info Sessions</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
+		</div>	
+	</section>
+		<section class="cards">
+		<div class="card">
+			<img src="graphic3.png" alt="design pic">
+			<h2>Web Info Sessions</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
 		</div>	
 	</section>
 </body>
